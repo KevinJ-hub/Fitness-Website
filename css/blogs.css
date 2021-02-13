@@ -1,0 +1,59 @@
+@font-face {
+    font-family: B612;
+    src: url(B612.woff);
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+#side-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 65%;
+    top: 125px;
+    left: 20px;
+    width: 25%;
+    background-color: #d6557c;
+    text-align: center;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    overflow: auto;
+}
+
+#side-nav li a {
+    display: block;
+    color: #ffffff;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    box-shadow: 0 5px 5px #ffffff70;
+    font-family: 'Crimson Text', serif;
+}
+
+/* Change the link color on hover */
+
+#side-nav li a:hover {
+    background-color: #14f7f786;
+    color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0, 225, 255, 0.795);
+}
+
+#side-nav #nav {
+    font-size: 30px;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.945);
+    font-family: 'B612', sans-serif;
+    font-style: italic;
+    background-color: #55d6aa;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.945);
+}
+
+#Yoga_thumbnail {
+    position: relative;
+    top: 125px;
+    left: 450px;
+}

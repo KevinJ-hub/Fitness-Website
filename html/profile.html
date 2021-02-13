@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/Projects/Fitness-Website/css/common.css">
+    <link rel="stylesheet" href="/Projects/Fitness-Website/css/profile.css">
+    <title>Profile | Fitness Website</title>
+    <script>
+        function open_register_form() {
+            document.getElementById("registration_form_div").style.display = "block";
+        }
+        function close_register_form() {
+            document.getElementById("registration_form_div").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Projects/Fitness-Website/html/index.html">Home</a></li>
+            <li><a href="/Projects/Fitness-Website/html/blogs.html">Blogs</a></li>
+            <li><a href="/Projects/Fitness-Website/html/ecommerce.html">Shop</a></li>
+            <li><a href="/Projects/Fitness-Website/html/compare.html">Compare</a></li>
+            <li class="left_button"><a class="present_page_button"
+                    href="/Projects/Fitness-Website/html/profile.html">Profile</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="login_form_div">
+        <form autocomplete="on" id="login_form">
+            <table>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input type="email" id="login_emailid" placeholder="Email Address">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input type="password" id="login_password" placeholder="Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input type="submit" value="Login">
+                        <input type="button" value="Register" onclick="open_register_form()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="registration_form_div">
+        <form autocomplete="on">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: left; padding-left: 10px;">
+                            <h1>Register Now</h1>
+                        </th>
+                        <td class="close_button" onclick="close_register_form()"">&times;</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style=" padding: 10px;"><label for="register_first_name">First name:</label><br>
+                            <input type="text" id="register_first_name" placeholder="Kevin">
+                        </td>
+                        <td style="padding: 10px;"><label for="register_middle_name">Middle name:</label><br>
+                            <input type="text" id="register_middle_name" placeholder="Chetan">
+                        </td>
+                        <td style="padding: 10px;"><label for="register_last_name">Last name:</label><br>
+                            <input type="text" id="register_last_name" placeholder="Joshi">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><input type="radio" id="register_male" name="register_gender">
+                            <label for="register_male">Male</label><br>
+                            <input type="radio" id="register_female" name="register_gender">
+                            <label for="register_female">Female</label><br>
+                            <input type="radio" id="register_other" name="register_gender">
+                            <label for="register_other">Other</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><label for="register_dob">DOB:</label><br>
+                            <input style="width: 98%;" id="register_dob" type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="padding: 10px;"><label for="register_address">Address:</label><br>
+                            <input style="width: 98%;" id="register_address" type="text"
+                                placeholder="54/4 Galaxy, Kannamwar Nagar1, Vikhroli (East)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><label for="register_city">City:</label><br>
+                            <input id="register_city" type="text" placeholder="Mumbai">
+                        </td>
+                        <td style="padding: 10px;"><label for="register_pincode">Pincode:</label><br>
+                            <input id="register_pincode" type="number" placeholder="400083">
+                        </td>
+                        <td style="padding: 10px;"><label for="register_country">Country:</label><br><select
+                                id="register_country" style="width: 98%;">
+                                <option selected>none</option>
+                                <option>INDIA</option>
+                                <option>USA</option>
+                                <option>UK</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding: 10px;"><label for="register_emailid">Email ID:</label><br>
+                            <input style="width: 98%;" id="register_emailid" type="email"
+                                placeholder="kevinjoshi46b@gmail.com">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding: 10px;"><label for="register_password">Password:</label><br>
+                            <input style="width: 98%;" id="register_password" type="password" id="password"><br>
+                            <label for="register_repassword">Re-Enter Password:</label><br>
+                            <input style="width: 98%;" id="register_repassword" type="password" id="re_password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="padding: 10px;">
+                            <input id="register_terms&condition" type="checkbox"><label for="register_terms&condition">
+                                I agree to the terms and conditions.</label>
+                            <input id="register_emailnotif" type="checkbox"><label for="register_emailnotif"> Enable
+                                promotional email notifications.</label>
+                        </td>
+                    </tr>
+                    </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="padding: 10px; padding-left: 55px;">
+                            <input style="width: 90%;" type="submit" value="Register">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

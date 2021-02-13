@@ -1,0 +1,13 @@
+.go_back {
+    text-decoration: none;
+    display:inline-block;
+    padding: 8px 10px;
+    background-color: #ff0000c0;
+    color: white;
+    box-shadow: 0.8mm 0.8mm 0.8mm rgba(0, 0, 0, 0.2);
+}
+
+.go_back:hover {
+    background-color: rgba(226, 226, 226, 0.678);
+    color: black;
+}
