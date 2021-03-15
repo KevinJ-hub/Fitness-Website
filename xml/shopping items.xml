@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <item type="shoes" brand="Nike">
+        <name>Nike Air Shoes</name>
+        <cost>2999 Rs.</cost>
+        <color>Black</color>
+        <for>Men</for>
+        <size>9</size>
+        <availability>5</availability>
+    </item>
+    <item type="shoes" brand="Nike">
+        <name>Nike Air Shoes</name>
+        <cost>3499 Rs.</cost>
+        <color>Grey</color>
+        <for>Men</for>
+        <size>9</size>
+        <availability>3</availability>
+    </item>
+    <item type="shoes" brand="Nike">
+        <name>Nike Air Shoes</name>
+        <cost>2499 Rs.</cost>
+        <color>Pink</color>
+        <for>Women</for>
+        <size>7</size>
+        <availability>4</availability>
+    </item>
+    <item type="hoodie" brand="adidas">
+        <name>Adidas Originals Hoodie</name>
+        <cost>1499 Rs.</cost>
+        <color>Black</color>
+        <for>Men</for>
+        <size>L</size>
+        <availability>10</availability>
+    </item>
+    <item type="hoodie" brand="adidas">
+        <name>Adidas Originals Hoodie</name>
+        <cost>1499 Rs.</cost>
+        <color>Black</color>
+        <for>Women</for>
+        <size>M</size>
+        <availability>2</availability>
+    </item>
+    <item type="head_band" brand="puma">
+        <name>Puma Head Band</name>
+        <cost>999 Rs.</cost>
+        <color>White</color>
+        <for>Men</for>
+        <availability>13</availability>
+    </item>
+    <item type="head_band" brand="puma">
+        <name>Puma Head Band</name>
+        <cost>999 Rs.</cost>
+        <color>Pink</color>
+        <for>Women</for>
+        <availability>17</availability>
+    </item>
+</inventory>
