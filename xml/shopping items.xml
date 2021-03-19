@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="shopping list.xsl" type="text/xsl"?>
+
 <inventory>
     <item type="shoes" brand="Nike">
         <name>Nike Air Shoes</name>
