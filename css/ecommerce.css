@@ -1,6 +1,12 @@
 #search_bar {
-    position: relative;
-    top: 1.8cm;
-    left: 2%;
     width: 95%;
+}
+nav .cart{
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    nav .cart{
+        display: block;
+    }
 }

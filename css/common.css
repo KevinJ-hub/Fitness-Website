@@ -1,25 +1,18 @@
 body {
     margin: 0;
-    background-color: rgb(255, 255, 255);
 }
 
 nav ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: rgb(30, 30, 30);
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
-}
-
-nav li {
-    float: left;
-}
-
-nav .left_button {
-    float: right;
+    background-color: rgb(30, 30, 30);
 }
 
 nav li a {
@@ -30,10 +23,18 @@ nav li a {
     text-decoration: none;
 }
 
-nav li a:hover:not(.present_page_button) {
-    background-color: rgb(20, 20, 20);
-}
-
 .present_page_button {
     background-color: #ff0000c0;
+}
+
+@media only screen and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+    }
+    nav .spacer {
+        flex: 1;
+    }
+    nav li a:hover:not(.present_page_button) {
+        background-color: rgb(20, 20, 20);
+    }
 }
