@@ -1,0 +1,52 @@
+.mobile-search-bar {
+    padding: 4%;
+}
+
+.mobile-search-bar input {
+    width: 100%;
+}
+
+.item-container {
+    padding: 0 4%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    grid-row-gap: 3%;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+}
+
+.item h3, .item p {
+    margin: 0;
+    text-align: center;
+}
+
+.item img {
+    width: 95%;
+}
+
+@media only screen and (min-width: 600px) {
+    .mobile-search-bar {
+        display: none;
+    }
+    .nav2 .spacer {
+        padding: 12.3px 5% 0 5%;
+    }
+    .nav2 .spacer input {
+        width: 100%;
+    }
+    .item-container {
+        padding: 2% 2% 0 2%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+    .item a {
+        color: rgba(45, 45, 45, 0.7);
+    }
+    .item a:hover {
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+}

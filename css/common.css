@@ -8,7 +8,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position:relative;
+    position: relative;
     top: 0;
     width: 100%;
     box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
@@ -43,14 +43,14 @@ body {
     flex: 1;
 }
 
-nav #dropdown{
+nav #dropdown {
     display: none;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position:absolute;
-    top:46.4px;
+    position: absolute;
+    top: 45px;
     width: 25%;
     box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
     background-color: rgb(30, 30, 30);
@@ -81,7 +81,7 @@ nav #dropdown li a {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        position:relative;
+        position: relative;
         top: 0;
         width: 100%;
         box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
