@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    padding-top: 50px;
 }
 
-nav ul {
+.nav1 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,26 +16,91 @@ nav ul {
     background-color: rgb(30, 30, 30);
 }
 
-nav li a {
+.nav1 .close-menu {
+    padding: 5px 16px 0px 13px;
+    font-size: 200%;
+}
+
+.nav1 #close-menu {
+    max-width: 43px;
+    max-height: 46.4px;
+    display: none;
+}
+
+.nav1 #hamburger-menu {
+    max-width: 43px;
+}
+
+.nav1 li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-align: left;
 }
 
-.present_page_button {
-    background-color: #ff0000c0;
+.nav1 .title {
+    flex: 1;
+}
+
+nav #dropdown{
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:46.4px;
+    width: 25%;
+    box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
+    background-color: rgb(30, 30, 30);
+    border-radius: 0px 0px 10px 10px;
+}
+
+nav #dropdown li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.nav2 {
+    display: none;
 }
 
 @media only screen and (min-width: 600px) {
-    nav ul {
-        flex-direction: row;
+    .phone-nav {
+        display: none;
     }
-    nav .spacer {
+    .nav2 {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
+        background-color: rgb(30, 30, 30);
+    }
+    .nav2 li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .nav2 .present_page_button {
+        background-color: #ff0000c0;
+    }
+    .nav2 .spacer {
         flex: 1;
     }
-    nav li a:hover:not(.present_page_button) {
+    .nav2 li a:hover:not(.present_page_button) {
         background-color: rgb(20, 20, 20);
     }
 }

@@ -7,16 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/common.js"></script>
     <title>Home | Fitness Website</title>
 </head>
 
 <body>
-    <center>
-        <h1>Fitness Website</h1>
-        <img id="Yoga_thumbnail" src="../src/Yoga.jpg" alt="Yoga Blog" height="780">
-    </center>
+    <nav class="phone-nav">
+        <ul class="nav1">
+            <li id="hamburger-menu"><a class="hamburger-menu" onclick="openNavbar()">
+                    <i class="fa fa-bars"></i></a></li>
+            <li id="close-menu"><a class="close-menu" onclick="closeNavbar()">&times;</a></li>
+            <li class="title"><a href="index.html">Home</a></li>
+        </ul>
+        <ul id="dropdown">
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="ecommerce.html">Shop</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
     <nav>
-        <ul>
+        <ul class="nav2">
             <li><a class="present_page_button" href="index.html">Home</a></li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="ecommerce.html">Shop</a></li>
