@@ -64,7 +64,7 @@
     </div>
 
     <div id="registration_form_div">
-        <form autocomplete="on">
+        <form name="regform" autocomplete="on" onsubmit="return validateForm()">
             <table>
                 <thead>
                     <tr>
@@ -77,44 +77,48 @@
                 <tbody>
                     <tr>
                         <td style=" padding: 10px;"><label for="register_first_name">First name:</label><br>
-                            <input type="text" id="register_first_name" placeholder="Kevin" autofocus required>
+                            <input type="text" id="register_firstname" name="register_firstname" placeholder="Kevin"
+                                autofocus required>
                         </td>
                         <td style="padding: 10px;"><label for="register_middle_name">Middle name:</label><br>
-                            <input type="text" id="register_middle_name" placeholder="Chetan">
+                            <input type="text" id="register_middlename" name="register_middlename" placeholder="Chetan">
                         </td>
                         <td style="padding: 10px;"><label for="register_last_name">Last name:</label><br>
-                            <input type="text" id="register_last_name" placeholder="Joshi" required>
+                            <input type="text" id="register_lastname" name="register_lastname" placeholder="Joshi"
+                                required>
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px;"><input type="radio" id="register_male" name="register_gender">
+                        <td style="padding: 10px;"><input type="radio" id="register_male" name="register_gender"
+                                value="Male">
                             <label for="register_male">Male</label><br>
-                            <input type="radio" id="register_female" name="register_gender">
+                            <input type="radio" id="register_female" name="register_gender" value="Female">
                             <label for="register_female">Female</label><br>
-                            <input type="radio" id="register_other" name="register_gender">
+                            <input type="radio" id="register_other" name="register_gender" value="Other">
                             <label for="register_other">Other</label>
                         </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px;"><label for="register_dob">DOB:</label><br>
-                            <input style="width: 98%;" id="register_dob" type="date" required>
+                            <input style="width: 98%;" id="register_dob" name="register_dob" type="date" required>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3" style="padding: 10px;"><label for="register_address">Address:</label><br>
-                            <input style="width: 98%;" id="register_address" type="text"
-                                placeholder="54/4 Galaxy, Kannamwar Nagar1, Vikhroli (East)">
+                            <input style="width: 98%;" id="register_address" name="register_address" type="text"
+                                placeholder="54/4 Galaxy, Kannamwar Nagar1, Vikhroli (East)" required>
                         </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px;"><label for="register_city">City:</label><br>
-                            <input id="register_city" type="text" placeholder="Mumbai">
+                            <input id="register_city" name="register_city" type="text" placeholder="Mumbai" required>
                         </td>
                         <td style="padding: 10px;"><label for="register_pincode">Pincode:</label><br>
-                            <input id="register_pincode" type="number" placeholder="400083">
+                            <input id="register_pincode" name="register_pincode" type="number" placeholder="400083"
+                                required>
                         </td>
                         <td style="padding: 10px;"><label for="register_country">Country:</label><br><select
-                                id="register_country" style="width: 98%;">
+                                id="register_country" name="register_country" style="width: 98%;" required>
                                 <option selected>none</option>
                                 <option>INDIA</option>
                                 <option>USA</option>
@@ -124,22 +128,26 @@
                     </tr>
                     <tr>
                         <td colspan="2" style="padding: 10px;"><label for="register_emailid">Email ID:</label><br>
-                            <input style="width: 98%;" id="register_emailid" type="email"
+                            <input style="width: 98%;" id="register_emailid" name="register_emailid" type="email"
                                 placeholder="kevinjoshi46b@gmail.com" required>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2" style="padding: 10px;"><label for="register_password">Password:</label><br>
-                            <input style="width: 98%;" id="register_password" type="password" required><br>
+                            <input style="width: 98%;" id="register_password" name="register_password" type="password"
+                                required><br>
                             <label for="register_repassword">Re-Enter Password:</label><br>
-                            <input style="width: 98%;" id="register_repassword" type="password" required>
+                            <input style="width: 98%;" id="register_repassword" name="register_repassword"
+                                type="password" required>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3" style="padding: 10px;">
-                            <input id="register_terms&condition" type="checkbox"><label for="register_terms&condition">
+                            <input id="register_terms&condition" name="register_terms&condition" type="checkbox"
+                                required><label for="register_terms&condition">
                                 I agree to the terms and conditions.</label>
-                            <input id="register_emailnotif" type="checkbox"><label for="register_emailnotif"> Enable
+                            <input id="register_emailnotif" name="register_emailnotif" type="checkbox"><label
+                                for="register_emailnotif"> Enable
                                 promotional email notifications.</label>
                         </td>
                     </tr>
