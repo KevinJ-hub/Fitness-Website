@@ -71,3 +71,8 @@ function validateForm() {
         alert(dataPreview);
     }
 };
+
+var app = angular.module('loginForm', []);
+app.controller('validate', function ($scope) {
+    $scope.email = "";
+});
