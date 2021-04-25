@@ -2,10 +2,9 @@ body {
     margin: 0;
 }
 
-.nav1 {
+nav {
     display: flex;
     flex-direction: row;
-    list-style-type: none;
     margin: 0;
     padding: 0;
     position: relative;
@@ -15,22 +14,7 @@ body {
     background-color: rgb(30, 30, 30);
 }
 
-.nav1 .close-menu {
-    padding: 5px 16px 0px 13px;
-    font-size: 200%;
-}
-
-.nav1 #close-menu {
-    max-width: 43px;
-    max-height: 46.4px;
-    display: none;
-}
-
-.nav1 #hamburger-menu {
-    max-width: 43px;
-}
-
-.nav1 li a {
+nav a {
     display: block;
     color: white;
     text-align: center;
@@ -39,14 +23,9 @@ body {
     text-align: left;
 }
 
-.nav1 .title {
-    flex: 1;
-}
-
-nav #dropdown {
+nav div {
     display: none;
     flex-direction: column;
-    list-style-type: none;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -57,50 +36,41 @@ nav #dropdown {
     border-radius: 0px 0px 10px 10px;
 }
 
-nav #dropdown li a {
-    /* border-top: 1px solid rgb(255, 255, 255); */
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-align: left;
+nav .current-page {
+    flex: 1;
 }
 
-.nav2 {
+nav .dropdown {
     display: none;
 }
 
+nav .close-menu {
+    display: none;
+    padding: 5px 14.5px 5px 13px;
+    font-size: 200%;
+    max-height: 47px;
+}
+
+nav .hamburger-menu {
+    max-width: 43px;
+}
+
 @media only screen and (min-width: 600px) {
-    .phone-nav {
+    nav div, nav .hamburger-menu, nav .close-menu {
         display: none;
     }
-    .nav2 {
+    nav .dropdown {
         display: flex;
         flex-direction: row;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        top: 0;
-        width: 100%;
-        box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
-        background-color: rgb(30, 30, 30);
     }
-    .nav2 li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    .nav2 .present_page_button {
-        background-color: #ff0000c0;
-    }
-    .nav2 .spacer {
+    nav .spacer {
         flex: 1;
     }
-    .nav2 li a:hover:not(.present_page_button) {
+    nav a:hover:not(.current-page, .spacer) {
         background-color: rgb(20, 20, 20);
+    }
+    nav .current-page {
+        flex: 0;
+        background-color: #ff0000c0;
     }
 }

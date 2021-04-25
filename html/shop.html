@@ -12,30 +12,22 @@
 </head>
 
 <body>
-    <nav class="phone-nav">
-        <ul class="nav1">
-            <li id="hamburger-menu"><a class="hamburger-menu" onclick="openNavbar()">
-                    <i class="fa fa-bars"></i></a></li>
-            <li id="close-menu"><a class="close-menu" onclick="closeNavbar()">&times;</a></li>
-            <li class="title"><a href="shop.html">Shop</a></li>
-            <li class="cart"><a href="checkout.html"><i class="fa fa-shopping-cart"></i></a></li>
-        </ul>
-        <ul id="dropdown">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-    </nav>
     <nav>
-        <ul class="nav2">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a class="present_page_button" href="shop.html">Shop</a></li>
-            <li class="spacer"><input type="search" placeholder="Search Item"></li>
-            <li class="cart"><a href="checkout.html"><i class="fa fa-shopping-cart"></i></a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
+        <a class="hamburger-menu" onclick="openNavbar()"><i class="fa fa-bars"></i></a>
+        <a class="close-menu" onclick="closeNavbar()">&times;</a>
+        <a class="dropdown" href="index.html">Home</a>
+        <a class="dropdown" href="blogs.html">Blogs</a>
+        <a class="current-page" href="shop.html">Shop</a>
+        <a class="dropdown spacer"><input  type="search" placeholder="Search Item"></a>
+        <a href="checkout.html"><i class="fa fa-shopping-cart"></i></a>
+        <a class="dropdown" href="profile.html">Profile</a>
+        <div class="dropdown-div">
+            <a href="index.html">Home</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="profile.html">Profile</a>
+        </div>
     </nav>
+
     <div class="mobile-search-bar"><input type="search" placeholder="Search Item"></div>
     <div class="item-container">
         <div class="item">

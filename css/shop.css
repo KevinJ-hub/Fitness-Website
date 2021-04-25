@@ -32,11 +32,11 @@
     .mobile-search-bar {
         display: none;
     }
-    .nav2 .spacer {
-        padding: 12.3px 5% 0 5%;
-    }
-    .nav2 .spacer input {
+    nav .spacer input {
+        border: 0;
         width: 100%;
+        border-radius: 4px;
+        padding-left: 10px;
     }
     .item-container {
         padding: 2% 2% 0 2%;
