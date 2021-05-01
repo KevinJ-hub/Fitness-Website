@@ -1,8 +1,10 @@
 function open_register_form() {
-    document.getElementById("registration_form_div").style.display = "block";
+    document.getElementsByClassName("login_form_div")[0].style.display = "none";
+    document.getElementsByClassName("registration_form_div")[0].style.display = "block";
 }
 function close_register_form() {
-    document.getElementById("registration_form_div").style.display = "none";
+    document.getElementsByClassName("registration_form_div")[0].style.display = "none";
+    document.getElementsByClassName("login_form_div")[0].style.display = "block";
 }
 
 function printError(Msg) {

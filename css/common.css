@@ -25,6 +25,7 @@ nav a {
 
 nav div {
     display: none;
+    z-index: 1;
     flex-direction: column;
     margin: 0;
     padding: 0;

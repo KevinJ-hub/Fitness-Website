@@ -30,129 +30,120 @@
         </div>
     </nav>
 
-    <div id="login_form_div">
-        <form ng-app="loginForm" ng-controller="validate" autocomplete="on" id="login_form" name="loginForm" novalidate>
-            <table>
-                <tr>
-                    <td style="padding: 5px;">
-                        <input ng-model="email" name="email" type="email" id="login_emailid"
-                            placeholder="Email Address"><br>
-                        <p ng-show="loginForm.email.$dirty && loginForm.email.$invalid">Invalid email address!</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 5px;">
-                        <input type="password" id="login_password" placeholder="Password">
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 5px;">
-                        <input type="submit" value="Login"
-                            ng-disabled="loginForm.email.$dirty && loginForm.email.$invalid">
-                        <input type="button" value="Register" onclick="open_register_form()">
-                    </td>
-                </tr>
-            </table>
+    <div class="login_form_div">
+        <form ng-app="loginForm" ng-controller="validate" autocomplete="on" name="loginForm">
+            <div class="mb-3">
+                <input class="form-control" ng-model="email" name="email" type="email" placeholder="Email ID" required>
+                <p ng-show="loginForm.email.$dirty && loginForm.email.$invalid">Invalid email address!</p>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="password" placeholder="Password" required>
+            </div>
+            <div class="buttons">
+                <input class="btn btn-primary b1" type="submit" value="Login" onclick="this.blur();"
+                    ng-disabled="loginForm.email.$dirty && loginForm.email.$invalid">
+                <hr>
+                <input class="btn btn-success b2" type="button" value="Register" onclick="open_register_form()">
+            </div>
         </form>
     </div>
 
-    <div id="registration_form_div">
+    <div class="registration_form_div">
         <form name="regform" autocomplete="on" onsubmit="return validateForm()">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2" style="text-align: left; padding-left: 10px;">
-                            <h1>Register Now</h1>
-                        </th>
-                        <td class="close_button" onclick="close_register_form()">&times;</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style=" padding: 10px;"><label for="register_first_name">First name:</label><br>
-                            <input type="text" id="register_firstname" name="register_firstname" placeholder="Kevin"
-                                autofocus required>
-                        </td>
-                        <td style="padding: 10px;"><label for="register_middle_name">Middle name:</label><br>
-                            <input type="text" id="register_middlename" name="register_middlename" placeholder="Chetan">
-                        </td>
-                        <td style="padding: 10px;"><label for="register_last_name">Last name:</label><br>
-                            <input type="text" id="register_lastname" name="register_lastname" placeholder="Joshi"
-                                required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;"><input type="radio" id="register_male" name="register_gender"
-                                value="Male">
-                            <label for="register_male">Male</label><br>
-                            <input type="radio" id="register_female" name="register_gender" value="Female">
-                            <label for="register_female">Female</label><br>
-                            <input type="radio" id="register_other" name="register_gender" value="Other">
-                            <label for="register_other">Other</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;"><label for="register_dob">DOB:</label><br>
-                            <input style="width: 98%;" id="register_dob" name="register_dob" type="date" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="padding: 10px;"><label for="register_address">Address:</label><br>
-                            <input style="width: 98%;" id="register_address" name="register_address" type="text"
-                                placeholder="54/4 Galaxy, Kannamwar Nagar1, Vikhroli (East)" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;"><label for="register_city">City:</label><br>
-                            <input id="register_city" name="register_city" type="text" placeholder="Mumbai" required>
-                        </td>
-                        <td style="padding: 10px;"><label for="register_pincode">Pincode:</label><br>
-                            <input id="register_pincode" name="register_pincode" type="number" placeholder="400083"
-                                required>
-                        </td>
-                        <td style="padding: 10px;"><label for="register_country">Country:</label><br><select
-                                id="register_country" name="register_country" style="width: 98%;" required>
-                                <option selected>none</option>
-                                <option>INDIA</option>
-                                <option>USA</option>
-                                <option>UK</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="padding: 10px;"><label for="register_emailid">Email ID:</label><br>
-                            <input style="width: 98%;" id="register_emailid" name="register_emailid" type="email"
-                                placeholder="kevinjoshi46b@gmail.com" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="padding: 10px;"><label for="register_password">Password:</label><br>
-                            <input style="width: 98%;" id="register_password" name="register_password" type="password"
-                                required><br>
-                            <label for="register_repassword">Re-Enter Password:</label><br>
-                            <input style="width: 98%;" id="register_repassword" name="register_repassword"
-                                type="password" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="padding: 10px;">
-                            <input id="register_terms&condition" name="register_terms&condition" type="checkbox"
-                                required><label for="register_terms&condition">
-                                I agree to the terms and conditions.</label>
-                            <input id="register_emailnotif" name="register_emailnotif" type="checkbox"><label
-                                for="register_emailnotif"> Enable
-                                promotional email notifications.</label>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3" style="padding: 10px; padding-left: 55px;">
-                            <input style="width: 90%;" type="submit" value="Register">
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+            <div class="header">
+                <h1>Register Now</h1>
+                <p onclick="close_register_form()">&times;</p>
+            </div>
+            <hr>
+            <div class="form-floating mb-3">
+                <input class="form-control" type="text" id="register_firstname" name="register_firstname"
+                    placeholder="Kevin" autofocus required>
+                <label for="register_firstname">First name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" type="text" id="register_middlename" name="register_middlename"
+                    placeholder="Chetan">
+                <label for="register_middlename">Middle name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" type="text" id="register_lastname" name="register_lastname"
+                    placeholder="Joshi" required>
+                <label for="register_lastname">Last name</label>
+            </div>
+            <div class="gender">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="register_male" name="register_gender" value="Male">
+                    <label class="form-check-label" for="register_male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="register_female" name="register_gender"
+                        value="Female">
+                    <label class="form-check-label" for="register_female">Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="register_other" name="register_gender"
+                        value="Other">
+                    <label class="form-check-label" for="register_other">Other</label>
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_dob" name="register_dob" type="date" required>
+                <label for="register_dob">DOB</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_address" name="register_address" type="text"
+                    placeholder="54/4 Galaxy, Kannamwar Nagar1, Vikhroli (East)" required>
+                <label for="register_address">Address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_city" name="register_city" type="text" placeholder="Mumbai"
+                    required>
+                <label for="register_city">City</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_pincode" name="register_pincode" type="number"
+                    placeholder="400083" required>
+                <label for="register_pincode">Pincode</label>
+            </div>
+            <div class="form-floating options">
+                <select class="form-control form-select" id="register_country" name="register_country" required>
+                    <option selected>none</option>
+                    <option>INDIA</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+                <label for="register_country">Country</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_emailid" name="register_emailid" type="email"
+                    placeholder="kevinjoshi46b@gmail.com" required>
+                <label for="register_emailid">Email ID</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_password" name="register_password" type="password" required>
+                <label for="register_password">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="register_repassword" name="register_repassword" type="password"
+                    required>
+                <label for="register_repassword">Re-Enter Password</label>
+            </div>
+            <div class="agreement">
+                <div class="form-check ag1">
+                    <input class="form-check-imput" id="register_terms&condition" name="register_terms&condition"
+                        type="checkbox" required>
+                    <label class="form-check-label" for="register_terms&condition">I agree to the terms and
+                        conditions.</label>
+                </div>
+                <div class="form-check ag2">
+                    <input class="form-check-imput" id="register_emailnotif" name="register_emailnotif" type="checkbox">
+                    <label class="form-check-label" for="register_emailnotif">Enable promotional email
+                        notifications.</label>
+                </div>
+            </div>
+            <div class="buttons">
+                <input class="btn btn-success b2" type="submit" value="Register">
+            </div>
         </form>
     </div>
 
