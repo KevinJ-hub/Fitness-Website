@@ -32,12 +32,15 @@
 
     <div class="login_form_div">
         <form ng-app="loginForm" ng-controller="validate" autocomplete="on" name="loginForm">
-            <div class="mb-3">
-                <input class="form-control" ng-model="email" name="email" type="email" placeholder="Email ID" required>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="login_emailid" ng-model="email" name="email" type="email"
+                    placeholder="kevinjoshi46b@gmail.com" required>
+                <label for="login_emailid">Email ID</label>
                 <p ng-show="loginForm.email.$dirty && loginForm.email.$invalid">Invalid email address!</p>
             </div>
-            <div class="mb-3">
-                <input class="form-control" type="password" placeholder="Password" required>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="login_password" type="password" placeholder="password" required>
+                <label for="login_password">Password</label>
             </div>
             <div class="buttons">
                 <input class="btn btn-primary b1" type="submit" value="Login" onclick="this.blur();"
@@ -120,12 +123,13 @@
                 <label for="register_emailid">Email ID</label>
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="register_password" name="register_password" type="password" required>
+                <input class="form-control" id="register_password" name="register_password" type="password"
+                    placeholder="password" required>
                 <label for="register_password">Password</label>
             </div>
             <div class="form-floating mb-3">
                 <input class="form-control" id="register_repassword" name="register_repassword" type="password"
-                    required>
+                    placeholder="repassword" required>
                 <label for="register_repassword">Re-Enter Password</label>
             </div>
             <div class="agreement">
