@@ -46,13 +46,17 @@ nav .dropdown {
 
 nav .close-menu {
     display: none;
-    padding: 5px 14.5px 5px 13px;
+    padding: 0px 12.48px;
     font-size: 200%;
     max-height: 47px;
 }
 
 nav .hamburger-menu {
     max-width: 43px;
+}
+
+a:hover {
+    color: white;
 }
 
 @media only screen and (min-width: 600px) {
