@@ -1,10 +1,12 @@
 function open_register_form() {
     document.getElementsByClassName("login_form_div")[0].style.display = "none";
     document.getElementsByClassName("registration_form_div")[0].style.display = "block";
+    document.getElementsByClassName("footer")[0].style.position = "relative";
 }
 function close_register_form() {
     document.getElementsByClassName("registration_form_div")[0].style.display = "none";
     document.getElementsByClassName("login_form_div")[0].style.display = "block";
+    document.getElementsByClassName("footer")[0].style.position = "fixed";
 }
 
 function printError(Msg) {
