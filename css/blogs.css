@@ -35,7 +35,7 @@
 }
 
 .outer-cards-container>h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 4%;
 }
@@ -81,16 +81,23 @@
         width: 80%;
     }
     .outer-cards-container>h1 {
-        font-size: 5rem;
+        font-size: 3rem;
+        margin-bottom: 2%;
     }
     .cards-container {
         flex-direction: row;
     }
     .cards-container .card {
-        width: 30%;
+        width: 48%;
         margin-bottom: 4%;
     }
     .cards-container .card-body .card-text {
         flex: 1;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .cards-container .card {
+        width: 32%;
     }
 }
