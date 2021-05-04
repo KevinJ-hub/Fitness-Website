@@ -33,9 +33,10 @@
     background-color: rgb(30, 30, 30);
     text-align: center;
     width: 96%;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     border-radius: 2mm;
     box-shadow: 0mm 1mm 1mm rgba(95, 95, 95, 0.5);
+    overflow: hidden;
 }
 
 .navigator a {
@@ -47,7 +48,6 @@
 }
 
 .navigator a:hover {
-    border-radius: 2mm;
     background-color: rgb(20, 20, 20);
 }
 
@@ -73,6 +73,7 @@ footer {
     }
     .navigator {
         flex-direction: row;
+        margin-bottom: 90px;
     }
     .navigator a {
         padding: 12px;

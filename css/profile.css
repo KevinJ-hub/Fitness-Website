@@ -2,6 +2,7 @@
     width: 300px;
     margin: auto;
     margin-top: 20%;
+    margin-bottom: 70px;
     border-radius: 3mm;
     box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.2);
     padding: 12px;
@@ -78,6 +79,7 @@ footer {
 @media only screen and (min-width: 600px) {
     .login_form_div {
         margin-top: 10%;
+        margin-bottom: 90px;
     }
     .registration_form_div {
         max-width: 80%;
