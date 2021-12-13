@@ -1,6 +1,6 @@
 # FITNESS WEBSITE
 
-This a project made by [Kevin Joshi](https://github.com/KevinJ-hub).  
+This is a project made by [Kevin Joshi](https://github.com/KevinJ-hub).  
 The website has 4 major pages (Home, Blog, Shop, Profile).  
 The whole website has been made flexible and has been developed for desktop and mobile devices.
 
