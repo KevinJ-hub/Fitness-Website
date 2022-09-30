@@ -10,7 +10,6 @@ The whole website has been made flexible and has been developed for desktop and 
 - CSS
 - Bootstrap
 - JS
-- AgularJS
 
 ## Running this project
 
